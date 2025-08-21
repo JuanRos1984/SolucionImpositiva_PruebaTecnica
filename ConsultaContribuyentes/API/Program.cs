@@ -1,3 +1,4 @@
+using Aplicacion.Interfaces.IComprobantes;
 using Aplicacion.Interfaces.IContribuyentes;
 using Aplicacion.Servicios;
 using Infraestructura.Persistencia.Contexto;
@@ -16,6 +17,9 @@ builder.Services.AddSqlServer<SolucionFiscalContext>(builder.Configuration.GetCo
 
 builder.Services.AddScoped<IContribuyenteServicio,ContribuyenteServicio>();
 builder.Services.AddScoped<IContribuyenteRepositorio,ContribuyenteRepositorio>();
+
+builder.Services.AddScoped<IComprobanteRepositorio, ComprobanteRepositorio>();
+builder.Services.AddScoped<IComprobanteServicio, ComprobanteServicio>();
 
 var app = builder.Build();
 

@@ -17,9 +17,9 @@ namespace Infraestructura.Persistencia.Repositorios
         {
             this.context = context;
         }
-        public IEnumerable<Comprobante> GetComprobantes()
+        public IEnumerable<Comprobante> GetComprobantes(string rncCedula)
         {
-            throw new NotImplementedException();
+            return context.Comprobantes.FromSqlRaw($"dbo.GetComprobantes {rncCedula}").ToList();
         }
     }
 }

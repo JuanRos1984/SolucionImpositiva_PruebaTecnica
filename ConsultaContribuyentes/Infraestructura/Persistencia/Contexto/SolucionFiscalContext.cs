@@ -17,5 +17,11 @@ namespace Infraestructura.Persistencia.Contexto
 
         public DbSet<Contribuyente> Contribuyentes { get; set; }
         public DbSet<Comprobante> Comprobantes { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Comprobante>()
+                .HasKey(a => new { a.RncCedula, a.NCF});
+        }
     }
 }

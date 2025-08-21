@@ -9,6 +9,6 @@ namespace Aplicacion.Interfaces.IComprobantes
 {
     public interface IComprobanteRepositorio
     {
-        IEnumerable<Comprobante> GetComprobantes();
+        IEnumerable<Comprobante> GetComprobantes(string rncCedula);
     }
 }
