@@ -33,7 +33,6 @@ namespace Aplicacion.Servicios
                 var comprobantes = repo.GetComprobantes(rncCedula);
                 if (comprobantes is null || !comprobantes.Any())
                 {
-                    logger.LogInformation($"No se encontraron comprobantes para este RNC / Cedula: {rncCedula}");
                     throw new ContribuyenteSinComprobanteExcepcion(rncCedula);
                 }
 
