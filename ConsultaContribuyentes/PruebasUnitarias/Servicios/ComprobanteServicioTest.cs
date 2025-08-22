@@ -75,6 +75,28 @@ namespace PruebasUnitarias.Servicios
             var servicio = new ComprobanteServicio(mockRepo.Object,mockLogger.Object);
 
             Assert.Throws<ContribuyenteSinComprobanteExcepcion>(() => servicio.GetComprobantes(rncCedula));
+        }
+
+        [Fact]
+        public void GetComprobantes_SumaITBISCorrectamente()
+        {
+            var rncCedula = "00100040205";
+
+            var comprobantes = new List<Comprobante>
+            {
+                new Comprobante { ITBIS18 = 1800 },
+                new Comprobante { ITBIS18 = 900 }
+            };
+
+            var mockRepo = new Mock<IComprobanteRepositorio>();
+            var mockLogger = new Mock<ILogger<ComprobanteServicio>>();
+            mockRepo.Setup(a => a.GetComprobantes(rncCedula)).Returns(comprobantes);
+
+            var servicio = new ComprobanteServicio(mockRepo.Object,mockLogger.Object);
+
+            var resultado = servicio.GetComprobantes(rncCedula);
+
+            Assert.Equal(2700,resultado.SumaITBIS);
 
         }
     }
