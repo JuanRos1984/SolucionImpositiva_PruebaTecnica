@@ -324,3 +324,20 @@ System.NotSupportedException: Serialization and deserialization of 'System.Refle
    at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
 2025-08-22 00:36:02.640 -04:00 [WRN] No hay contribuyentes para mostrar
 2025-08-22 00:37:12.051 -04:00 [WRN] No hay contribuyentes para mostrar
+2025-08-22 00:56:44.638 -04:00 [WRN] No hay contribuyentes para mostrar
+2025-08-22 01:30:50.754 -04:00 [INF] No se encontraron comprobantes para este RNC / Cedula: 223
+2025-08-22 01:30:50.843 -04:00 [INF] Capa de Aplicacion: No se encontraron comprobantes fiscales para el RNC / Cedula: 223
+Dominio.Excepciones.ContribuyenteSinComprobanteExcepcion: No se encontraron comprobantes fiscales para el RNC / Cedula: 223
+   at Aplicacion.Servicios.ComprobanteServicio.GetComprobantes(String rncCedula) in C:\FORMACION\SolucionImpositiva_PruebaTecnica\ConsultaContribuyentes\Aplicacion\Servicios\ComprobanteServicio.cs:line 41
+2025-08-22 01:31:49.290 -04:00 [INF] No se encontraron comprobantes para este RNC / Cedula: 223
+2025-08-22 01:31:49.378 -04:00 [INF] Capa de Aplicacion: No se encontraron comprobantes fiscales para el RNC / Cedula: 223
+Dominio.Excepciones.ContribuyenteSinComprobanteExcepcion: No se encontraron comprobantes fiscales para el RNC / Cedula: 223
+   at Aplicacion.Servicios.ComprobanteServicio.GetComprobantes(String rncCedula) in C:\FORMACION\SolucionImpositiva_PruebaTecnica\ConsultaContribuyentes\Aplicacion\Servicios\ComprobanteServicio.cs:line 41
+2025-08-22 01:34:20.208 -04:00 [INF] No se encontraron comprobantes para este RNC / Cedula: 223
+2025-08-22 01:34:25.899 -04:00 [INF] Capa de Aplicacion: No se encontraron comprobantes fiscales para el RNC / Cedula: 223
+Dominio.Excepciones.ContribuyenteSinComprobanteExcepcion: No se encontraron comprobantes fiscales para el RNC / Cedula: 223
+   at Aplicacion.Servicios.ComprobanteServicio.GetComprobantes(String rncCedula) in C:\FORMACION\SolucionImpositiva_PruebaTecnica\ConsultaContribuyentes\Aplicacion\Servicios\ComprobanteServicio.cs:line 41
+2025-08-22 09:19:39.919 -04:00 [INF] Capa de Aplicacion: No se encontraron comprobantes fiscales para el RNC / Cedula: 223
+Dominio.Excepciones.ContribuyenteSinComprobanteExcepcion: No se encontraron comprobantes fiscales para el RNC / Cedula: 223
+   at Aplicacion.Servicios.ComprobanteServicio.GetComprobantes(String rncCedula) in C:\FORMACION\SolucionImpositiva_PruebaTecnica\ConsultaContribuyentes\Aplicacion\Servicios\ComprobanteServicio.cs:line 36
+2025-08-22 09:19:48.424 -04:00 [WRN] Al controlador llego un RNC / Cedula nulo o vacío
