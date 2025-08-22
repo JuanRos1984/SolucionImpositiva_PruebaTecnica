@@ -3,9 +3,17 @@ using Aplicacion.Interfaces.IContribuyentes;
 using Aplicacion.Servicios;
 using Infraestructura.Persistencia.Contexto;
 using Infraestructura.Persistencia.Repositorios;
+using Serilog;
+
+Log.Logger = new LoggerConfiguration()
+    .ReadFrom.Configuration(new ConfigurationBuilder()
+     .AddJsonFile("appsettings.json")
+     .Build())
+    .CreateLogger();
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Host.UseSerilog();
 // Add services to the container.
 
 builder.Services.AddControllers();

@@ -1,0 +1,144 @@
+2025-08-21 19:02:01.658 -04:00 [WRN] Se intento obtener comprobantes sin enviar un RNC o Cedula valido
+2025-08-21 19:02:08.741 -04:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: Value cannot be null. (Parameter 'El RNC o Cedula no deben estar vacios')
+   at Aplicacion.Servicios.ComprobanteServicio.GetComprobantes(String rncCedula) in C:\FORMACION\SolucionImpositiva_PruebaTecnica\ConsultaContribuyentes\Aplicacion\Servicios\ComprobanteServicio.cs:line 28
+   at API.Controllers.ComprobanteController.Get(String rncCedula) in C:\FORMACION\SolucionImpositiva_PruebaTecnica\ConsultaContribuyentes\API\Controllers\ComprobanteController.cs:line 19
+   at lambda_method2(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-08-21 19:15:27.126 -04:00 [INF] No se encontraron comprobantes para este RNC / Cedula: 123156465456
+2025-08-21 19:15:27.210 -04:00 [FTL] Error en el servicio de comprobantes para el RNC 123156465456
+Dominio.Excepciones.ContribuyenteSinComprobanteExcepcion: No se encontraron comprobantes fiscales para el RNC / Cedula: 123156465456
+   at Aplicacion.Servicios.ComprobanteServicio.GetComprobantes(String rncCedula) in C:\FORMACION\SolucionImpositiva_PruebaTecnica\ConsultaContribuyentes\Aplicacion\Servicios\ComprobanteServicio.cs:line 38
+2025-08-21 19:15:27.456 -04:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: Ocurrió un error inesperado al procesar la solicitud. Contacte a un administrador.
+ ---> Dominio.Excepciones.ContribuyenteSinComprobanteExcepcion: No se encontraron comprobantes fiscales para el RNC / Cedula: 123156465456
+   at Aplicacion.Servicios.ComprobanteServicio.GetComprobantes(String rncCedula) in C:\FORMACION\SolucionImpositiva_PruebaTecnica\ConsultaContribuyentes\Aplicacion\Servicios\ComprobanteServicio.cs:line 38
+   --- End of inner exception stack trace ---
+   at Aplicacion.Servicios.ComprobanteServicio.GetComprobantes(String rncCedula) in C:\FORMACION\SolucionImpositiva_PruebaTecnica\ConsultaContribuyentes\Aplicacion\Servicios\ComprobanteServicio.cs:line 57
+   at API.Controllers.ComprobanteController.Get(String rncCedula) in C:\FORMACION\SolucionImpositiva_PruebaTecnica\ConsultaContribuyentes\API\Controllers\ComprobanteController.cs:line 19
+   at lambda_method2(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-08-21 19:15:39.394 -04:00 [INF] No se encontraron comprobantes para este RNC / Cedula: 123156465456
+2025-08-21 19:15:39.428 -04:00 [FTL] Error en el servicio de comprobantes para el RNC 123156465456
+Dominio.Excepciones.ContribuyenteSinComprobanteExcepcion: No se encontraron comprobantes fiscales para el RNC / Cedula: 123156465456
+   at Aplicacion.Servicios.ComprobanteServicio.GetComprobantes(String rncCedula) in C:\FORMACION\SolucionImpositiva_PruebaTecnica\ConsultaContribuyentes\Aplicacion\Servicios\ComprobanteServicio.cs:line 38
+2025-08-21 19:15:39.644 -04:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: Ocurrió un error inesperado al procesar la solicitud. Contacte a un administrador.
+ ---> Dominio.Excepciones.ContribuyenteSinComprobanteExcepcion: No se encontraron comprobantes fiscales para el RNC / Cedula: 123156465456
+   at Aplicacion.Servicios.ComprobanteServicio.GetComprobantes(String rncCedula) in C:\FORMACION\SolucionImpositiva_PruebaTecnica\ConsultaContribuyentes\Aplicacion\Servicios\ComprobanteServicio.cs:line 38
+   --- End of inner exception stack trace ---
+   at Aplicacion.Servicios.ComprobanteServicio.GetComprobantes(String rncCedula) in C:\FORMACION\SolucionImpositiva_PruebaTecnica\ConsultaContribuyentes\Aplicacion\Servicios\ComprobanteServicio.cs:line 57
+   at API.Controllers.ComprobanteController.Get(String rncCedula) in C:\FORMACION\SolucionImpositiva_PruebaTecnica\ConsultaContribuyentes\API\Controllers\ComprobanteController.cs:line 19
+   at lambda_method2(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-08-21 19:15:41.891 -04:00 [INF] No se encontraron comprobantes para este RNC / Cedula: 123156465456
+2025-08-21 19:15:41.923 -04:00 [FTL] Error en el servicio de comprobantes para el RNC 123156465456
+Dominio.Excepciones.ContribuyenteSinComprobanteExcepcion: No se encontraron comprobantes fiscales para el RNC / Cedula: 123156465456
+   at Aplicacion.Servicios.ComprobanteServicio.GetComprobantes(String rncCedula) in C:\FORMACION\SolucionImpositiva_PruebaTecnica\ConsultaContribuyentes\Aplicacion\Servicios\ComprobanteServicio.cs:line 38
+2025-08-21 19:15:42.119 -04:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: Ocurrió un error inesperado al procesar la solicitud. Contacte a un administrador.
+ ---> Dominio.Excepciones.ContribuyenteSinComprobanteExcepcion: No se encontraron comprobantes fiscales para el RNC / Cedula: 123156465456
+   at Aplicacion.Servicios.ComprobanteServicio.GetComprobantes(String rncCedula) in C:\FORMACION\SolucionImpositiva_PruebaTecnica\ConsultaContribuyentes\Aplicacion\Servicios\ComprobanteServicio.cs:line 38
+   --- End of inner exception stack trace ---
+   at Aplicacion.Servicios.ComprobanteServicio.GetComprobantes(String rncCedula) in C:\FORMACION\SolucionImpositiva_PruebaTecnica\ConsultaContribuyentes\Aplicacion\Servicios\ComprobanteServicio.cs:line 57
+   at API.Controllers.ComprobanteController.Get(String rncCedula) in C:\FORMACION\SolucionImpositiva_PruebaTecnica\ConsultaContribuyentes\API\Controllers\ComprobanteController.cs:line 19
+   at lambda_method2(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-08-21 19:16:05.542 -04:00 [INF] No se encontraron comprobantes para este RNC / Cedula: 123156465456
+2025-08-21 19:16:50.344 -04:00 [FTL] Error en el servicio de comprobantes para el RNC 123156465456
+Dominio.Excepciones.ContribuyenteSinComprobanteExcepcion: No se encontraron comprobantes fiscales para el RNC / Cedula: 123156465456
+   at Aplicacion.Servicios.ComprobanteServicio.GetComprobantes(String rncCedula) in C:\FORMACION\SolucionImpositiva_PruebaTecnica\ConsultaContribuyentes\Aplicacion\Servicios\ComprobanteServicio.cs:line 38
+2025-08-21 19:16:50.560 -04:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: Ocurrió un error inesperado al procesar la solicitud. Contacte a un administrador.
+ ---> Dominio.Excepciones.ContribuyenteSinComprobanteExcepcion: No se encontraron comprobantes fiscales para el RNC / Cedula: 123156465456
+   at Aplicacion.Servicios.ComprobanteServicio.GetComprobantes(String rncCedula) in C:\FORMACION\SolucionImpositiva_PruebaTecnica\ConsultaContribuyentes\Aplicacion\Servicios\ComprobanteServicio.cs:line 38
+   --- End of inner exception stack trace ---
+   at Aplicacion.Servicios.ComprobanteServicio.GetComprobantes(String rncCedula) in C:\FORMACION\SolucionImpositiva_PruebaTecnica\ConsultaContribuyentes\Aplicacion\Servicios\ComprobanteServicio.cs:line 57
+   at API.Controllers.ComprobanteController.Get(String rncCedula) in C:\FORMACION\SolucionImpositiva_PruebaTecnica\ConsultaContribuyentes\API\Controllers\ComprobanteController.cs:line 19
+   at lambda_method2(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-08-21 22:13:42.068 -04:00 [WRN] Al controlador llego un RNC / Cedula nulo o vacío
+2025-08-21 22:13:58.201 -04:00 [INF] No se encontraron comprobantes para este RNC / Cedula: 123123
+2025-08-21 22:13:58.233 -04:00 [INF] Capa de Aplicacion: No se encontraron comprobantes fiscales para el RNC / Cedula: 123123
+Dominio.Excepciones.ContribuyenteSinComprobanteExcepcion: No se encontraron comprobantes fiscales para el RNC / Cedula: 123123
+   at Aplicacion.Servicios.ComprobanteServicio.GetComprobantes(String rncCedula) in C:\FORMACION\SolucionImpositiva_PruebaTecnica\ConsultaContribuyentes\Aplicacion\Servicios\ComprobanteServicio.cs:line 37
