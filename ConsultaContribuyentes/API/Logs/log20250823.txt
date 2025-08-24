@@ -1,0 +1,24 @@
+2025-08-23 23:39:33.191 -04:00 [INF] Capa de Aplicacion: No se encontraron comprobantes fiscales para el RNC / Cedula: 22300000042
+Dominio.Excepciones.ContribuyenteSinComprobanteExcepcion: No se encontraron comprobantes fiscales para el RNC / Cedula: 22300000042
+   at Aplicacion.Servicios.ComprobanteServicio.GetComprobantes(String rncCedula) in C:\FORMACION\SolucionImpositiva_PruebaTecnica\ConsultaContribuyentes\Aplicacion\Servicios\ComprobanteServicio.cs:line 36
+2025-08-23 23:39:34.294 -04:00 [INF] Capa de Aplicacion: No se encontraron comprobantes fiscales para el RNC / Cedula: 22300000042
+Dominio.Excepciones.ContribuyenteSinComprobanteExcepcion: No se encontraron comprobantes fiscales para el RNC / Cedula: 22300000042
+   at Aplicacion.Servicios.ComprobanteServicio.GetComprobantes(String rncCedula) in C:\FORMACION\SolucionImpositiva_PruebaTecnica\ConsultaContribuyentes\Aplicacion\Servicios\ComprobanteServicio.cs:line 36
+2025-08-23 23:39:34.951 -04:00 [INF] Capa de Aplicacion: No se encontraron comprobantes fiscales para el RNC / Cedula: 22300000042
+Dominio.Excepciones.ContribuyenteSinComprobanteExcepcion: No se encontraron comprobantes fiscales para el RNC / Cedula: 22300000042
+   at Aplicacion.Servicios.ComprobanteServicio.GetComprobantes(String rncCedula) in C:\FORMACION\SolucionImpositiva_PruebaTecnica\ConsultaContribuyentes\Aplicacion\Servicios\ComprobanteServicio.cs:line 36
+2025-08-23 23:39:38.039 -04:00 [INF] Capa de Aplicacion: No se encontraron comprobantes fiscales para el RNC / Cedula: 22300000042
+Dominio.Excepciones.ContribuyenteSinComprobanteExcepcion: No se encontraron comprobantes fiscales para el RNC / Cedula: 22300000042
+   at Aplicacion.Servicios.ComprobanteServicio.GetComprobantes(String rncCedula) in C:\FORMACION\SolucionImpositiva_PruebaTecnica\ConsultaContribuyentes\Aplicacion\Servicios\ComprobanteServicio.cs:line 36
+2025-08-23 23:39:41.811 -04:00 [INF] Capa de Aplicacion: No se encontraron comprobantes fiscales para el RNC / Cedula: 22300000042
+Dominio.Excepciones.ContribuyenteSinComprobanteExcepcion: No se encontraron comprobantes fiscales para el RNC / Cedula: 22300000042
+   at Aplicacion.Servicios.ComprobanteServicio.GetComprobantes(String rncCedula) in C:\FORMACION\SolucionImpositiva_PruebaTecnica\ConsultaContribuyentes\Aplicacion\Servicios\ComprobanteServicio.cs:line 36
+2025-08-23 23:46:05.079 -04:00 [INF] Capa de Aplicacion: No se encontraron comprobantes fiscales para el RNC / Cedula: 22300000042
+Dominio.Excepciones.ContribuyenteSinComprobanteExcepcion: No se encontraron comprobantes fiscales para el RNC / Cedula: 22300000042
+   at Aplicacion.Servicios.ComprobanteServicio.GetComprobantes(String rncCedula) in C:\FORMACION\SolucionImpositiva_PruebaTecnica\ConsultaContribuyentes\Aplicacion\Servicios\ComprobanteServicio.cs:line 36
+2025-08-23 23:46:11.125 -04:00 [INF] Capa de Aplicacion: No se encontraron comprobantes fiscales para el RNC / Cedula: 22300000042
+Dominio.Excepciones.ContribuyenteSinComprobanteExcepcion: No se encontraron comprobantes fiscales para el RNC / Cedula: 22300000042
+   at Aplicacion.Servicios.ComprobanteServicio.GetComprobantes(String rncCedula) in C:\FORMACION\SolucionImpositiva_PruebaTecnica\ConsultaContribuyentes\Aplicacion\Servicios\ComprobanteServicio.cs:line 36
+2025-08-23 23:46:53.982 -04:00 [INF] Capa de Aplicacion: No se encontraron comprobantes fiscales para el RNC / Cedula: 22300000042
+Dominio.Excepciones.ContribuyenteSinComprobanteExcepcion: No se encontraron comprobantes fiscales para el RNC / Cedula: 22300000042
+   at Aplicacion.Servicios.ComprobanteServicio.GetComprobantes(String rncCedula) in C:\FORMACION\SolucionImpositiva_PruebaTecnica\ConsultaContribuyentes\Aplicacion\Servicios\ComprobanteServicio.cs:line 36

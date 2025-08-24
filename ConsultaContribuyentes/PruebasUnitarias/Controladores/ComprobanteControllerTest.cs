@@ -12,6 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Dominio.Entidades;
+using Dominio.Excepciones;
 
 namespace PruebasUnitarias.Controladores
 {
@@ -79,6 +80,33 @@ namespace PruebasUnitarias.Controladores
             Assert.Equal(dto.Comprobantes.FirstOrDefault().RncCedula,dtoResultado.Comprobantes.FirstOrDefault().RncCedula);
             Assert.Equal(2,dtoResultado.Comprobantes.Count);
             Assert.Equal(540,dtoResultado.SumaITBIS);
+        }
+
+        [Fact]
+        public void Get_ServicioLanzaContribuyenteSinComprobanteExcepcion_RetornaNotFound()
+        {
+            var rnc = "402";
+            mockServicio.Setup(a=>a.GetComprobantes(rnc))
+                .Throws(new ContribuyenteSinComprobanteExcepcion(rnc));
+
+            var resultado = controller.Get(rnc);
+
+            var notFound = Assert.IsType<NotFoundObjectResult>(resultado);
+            Assert.Equal($"No se encontraron comprobantes fiscales para el RNC / Cedula: {rnc}",notFound.Value);
+        }
+
+        [Fact]
+        public void Get_ServicioLanzaExcepcionInesperada_RetornaStatusCode500()
+        {
+            var rnc = "402";
+            mockServicio.Setup(a=>a.GetComprobantes(rnc))
+                .Throws(new Exception("Error"));
+
+            var resultado = controller.Get(rnc);
+
+            var error = Assert.IsType<ObjectResult>(resultado);
+            Assert.Equal(500,error.StatusCode);
+            Assert.Equal("Hubo un error al ejecutar esta petición. Contacte a un administrador", error.Value);
         }
     }
 }
