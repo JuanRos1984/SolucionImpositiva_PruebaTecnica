@@ -53,10 +53,3 @@ Los errores se registran automáticamente en un archivo de log ubicado en la car
 
 ---
 
-## Nota
-
-No olvide configurar la cadena de conexión en `appsettings.json` con los datos del servidor donde va a ejecutar el script de la BD
-
----
-
-## 📂 Estructura del proyecto
