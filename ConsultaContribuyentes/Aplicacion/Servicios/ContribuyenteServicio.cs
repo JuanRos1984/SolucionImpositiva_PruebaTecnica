@@ -26,7 +26,7 @@ namespace Aplicacion.Servicios
             try
             {
                 var contribuyentes = repo.GetContribuyentes();
-                if (contribuyentes == null || !contribuyentes.Any())
+                if (!contribuyentes.Any())
                    throw new NoHayRegistrosExcepcion();
                 
                 result = contribuyentes.Select(contri => new ContribuyenteDTO
