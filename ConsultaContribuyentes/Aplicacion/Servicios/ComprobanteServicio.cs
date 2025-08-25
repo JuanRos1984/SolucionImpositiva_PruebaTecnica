@@ -31,7 +31,7 @@ namespace Aplicacion.Servicios
             try
             {
                 var comprobantes = repo.GetComprobantes(rncCedula);
-                if (comprobantes is null || !comprobantes.Any())
+                if (!comprobantes.Any())
                 {
                     throw new ContribuyenteSinComprobanteExcepcion(rncCedula);
                 }

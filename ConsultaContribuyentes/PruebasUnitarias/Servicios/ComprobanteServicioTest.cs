@@ -14,6 +14,16 @@ namespace PruebasUnitarias.Servicios
 {
     public class ComprobanteServicioTest
     {
+        private readonly Mock<IComprobanteRepositorio> mockRepo;
+        private readonly Mock<ILogger<ComprobanteServicio>> mockLogger;
+        private readonly ComprobanteServicio servicio;
+        public ComprobanteServicioTest()
+        {
+            mockRepo = new Mock<IComprobanteRepositorio>();
+            mockLogger = new Mock<ILogger<ComprobanteServicio>>();
+            servicio = new ComprobanteServicio(mockRepo.Object,mockLogger.Object);
+        }
+
         [Fact]
         public void GetComprobantes_RNCValidoConComprobantes_RetornaInformacion()
         {
@@ -41,10 +51,7 @@ namespace PruebasUnitarias.Servicios
                     ITBIS18 = 180
                 }
             };
-            var mockRepo = new Mock<IComprobanteRepositorio>();
-            var mockLogger = new Mock<ILogger<ComprobanteServicio>>();
             mockRepo.Setup(a => a.GetComprobantes(rncCedula)).Returns(comprobantes);
-            var servicio = new ComprobanteServicio(mockRepo.Object,mockLogger.Object);
 
             var resultado = servicio.GetComprobantes(rncCedula);
 
@@ -57,10 +64,6 @@ namespace PruebasUnitarias.Servicios
         [Fact]
         public void GetComprobantes_RncVacio_LanzaArgumentNullException()
         {
-            var mockRepo = new Mock<IComprobanteRepositorio>();
-            var mockLogger = new Mock<ILogger<ComprobanteServicio>>();
-            var servicio = new ComprobanteServicio(mockRepo.Object, mockLogger.Object);
-
             Assert.Throws<ArgumentNullException>(() => servicio.GetComprobantes(""));
         }
 
@@ -68,14 +71,27 @@ namespace PruebasUnitarias.Servicios
         public void GetComprobantes_RncValidoSinComprobantes_LanzaContribuyenteSinComprobanteExcepcion()
         {
             var rncCedula = "223";
-            var mockRepo = new Mock<IComprobanteRepositorio>();
-            var mockLogger = new Mock<ILogger<ComprobanteServicio>>();
             mockRepo.Setup(a => a.GetComprobantes(rncCedula)).Returns(new List<Comprobante>());
 
-            var servicio = new ComprobanteServicio(mockRepo.Object,mockLogger.Object);
-
             Assert.Throws<ContribuyenteSinComprobanteExcepcion>(() => servicio.GetComprobantes(rncCedula));
+        }
 
+        [Fact]
+        public void GetComprobantes_SumaITBISCorrectamente()
+        {
+            var rncCedula = "00100040205";
+
+            var comprobantes = new List<Comprobante>
+            {
+                new Comprobante { ITBIS18 = 1800 },
+                new Comprobante { ITBIS18 = 900 }
+            };
+            mockRepo.Setup(a => a.GetComprobantes(rncCedula)).Returns(comprobantes);
+
+
+            var resultado = servicio.GetComprobantes(rncCedula);
+
+            Assert.Equal(2700,resultado.SumaITBIS);
         }
     }
 }

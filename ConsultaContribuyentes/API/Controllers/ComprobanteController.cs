@@ -17,7 +17,7 @@ namespace API.Controllers
             this.servicio = servicio;
             this.logger = logger;
         }
-        [HttpGet("ncf-por-contribuyente")]
+        [HttpGet("ncf-por-contribuyente/{rncCedula}")]
         public IActionResult Get(string? rncCedula)
         {
             if (string.IsNullOrWhiteSpace(rncCedula))
